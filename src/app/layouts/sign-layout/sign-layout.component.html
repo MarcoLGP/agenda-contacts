@@ -1,0 +1,41 @@
+<section class="sign-layout-container">
+    <div class="sign-layout-main">
+      <header class="sign-layout-header">
+        <img class="sign-layout-app-logo" src="/assets/images/app-logo.png" alt="Logo" />
+        <h1 class="sign-layout-title">Agenda de Contatos</h1>
+      </header>
+      <main class="sign-layout-content">
+        <section class="sign-layout-form-box">
+          <app-icon-bordered [icon]="icon" iconSize="20px" />
+          <h3 class="sign-layout-box-title">{{ title }}</h3>
+          <span class="app-secundary-font sign-layout-box-subtitle">{{ subtitle }}</span>
+          <ng-content></ng-content>                
+        </section>
+        @if(backNavigation) {
+          <div class="sign-layout-back-navigation">
+            <ng-icon [svg]="arrowBackIcon" [size]="'20px'" />
+            <span>            
+              <a href="/login">Voltar e fazer login</a>
+            </span>
+          </div>
+        }
+      </main>
+    </div>
+    <aside class="sign-layout-sidebar">
+      <figure class="sign-layout-figure">
+        <img class="sign-layout-image" src="/assets/images/sign-wallpaper.jpg" alt="Banner informativo" />
+        <figcaption class="sign-layout-figcaption" [class.fade-in-out]="isAnimating">
+          <blockquote class="sign-layout-quote">
+            <p>
+              {{ currentQuote.text }}
+            </p>
+          </blockquote>
+          <footer class="sign-layout-footer">
+            <p class="sign-layout-author">{{ currentQuote.author }}</p>
+            <small class="sign-layout-role">{{ currentQuote.role }}</small>
+          </footer>
+        </figcaption>
+      </figure>
+    </aside>
+  </section>
+  
