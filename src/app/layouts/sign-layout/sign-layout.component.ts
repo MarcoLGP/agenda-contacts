@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IconBorderedComponent } from "../../components/icon-bordered/icon-bordered.component";
+import { IconBorderedComponent } from "@components/icon-bordered/icon-bordered.component";
 import { NgIcon } from '@ng-icons/core';
 import { ionArrowBackOutline } from '@ng-icons/ionicons';
 

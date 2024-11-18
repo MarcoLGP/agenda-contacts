@@ -11,6 +11,13 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/app/components/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@services/*": ["src/app/services/*"],
+      "@layouts/*": ["src/app/layouts/*"]
+    },
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
